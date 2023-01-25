@@ -1,0 +1,113 @@
+<h1>Bienvenue sur mon site</h1>
+
+<form action="">
+<label for="State">State (ex:CA):</label>
+
+<input type="text" id="State" name="State" >
+<br>
+<br>
+<label for="BankState">BankState (ex:CA):</label>
+<input type="text" id="BankState" name="BankState" >
+<br>
+<br>
+<label for="NAICS">NAICS (ex:Sector not known):</label>
+<input type="text" id="NAICS" name="NAICS" >
+<br>
+<br>
+<label for="Term">Term (ex:80):</label>
+<input type="int" id="Term" name="Term" >
+<br>
+<br>
+<label for="NewExist">NewExist (1 or 0):</label>
+<input type="int" id="NewExist" name="NewExist" >
+<br>
+<br>
+<label for="CreateJob">CreateJob (5):</label>
+<input type="int" id="CreateJob" name="CreateJob" >
+<br>
+<br>
+<label for="RetainedJob">RetainedJob (2):</label>
+<input type="int" id="RetainedJob" name="RetainedJob" >
+<br>
+<br>
+<label for="FranchiseCode">FranchiseCode (1 or 0):</label>
+<input type="int" id="FranchiseCode" name="FranchiseCode" >
+<br>
+<br>
+<label for="UrbanRural">UrbanRural (1 or 0):</label>
+<input type="int" id="UrbanRural" name="UrbanRural" >
+<br>
+<br>
+<label for="RevLineCr">RevLineCr (1 or 0):</label>
+<input type="int" id="RevLineCr" name="RevLineCr" >
+<br>
+<br>
+<label for="LowDoc">LowDoc (1 or 0):</label>
+<input type="int" id="LowDoc" name="LowDoc" >
+<br>
+<br>
+<label for="DisbursementGross">DisbursementGross (ex:35000.0):</label>
+<input type="float" id="DisbursementGross" name="DisbursementGross" >
+
+<br>
+<br>
+
+<input class="favorite styled"
+       type="button" onclick="getValue();"
+       value="Envoyer">
+</form>
+
+<script>
+    function getValue() {
+        inputName = ["State","BankState","NAICS","Term","NewExist","CreateJob","RetainedJob","FranchiseCode","UrbanRural","RevLineCr","LowDoc","DisbursementGross"]
+        let dict = {};
+        // Sélectionner l'élément input et récupérer sa valeur
+        for(var i = 0 ; i< inputName.length;i++)
+        {
+            dict[inputName[i]] = document.getElementById(inputName[i]).value;
+         
+
+        }
+    
+        console.log(JSON.stringify(dict));
+        const url = 'http://0.0.0.0:5000/predict'
+        const data = {
+            "State": "CA",
+            "BankState": "CA",
+            "NAICS": "Other services (except public administration)",
+            "Term": 228,
+            "NoEmp": 6,
+            "NewExist": 1,
+            "CreateJob": 0,
+            "RetainedJob": 0,
+            "FranchiseCode": 1,
+            "UrbanRural": 0,
+            "RevLineCr": 0,
+            "LowDoc": 0,
+            "DisbursementGross": 540000.0
+          }
+        const otherParams = {
+            headers:{
+                "content-type":"application/json; charset=UTF-8"
+            },
+            body:data,
+            method :"POST"
+        };
+
+        console.log(JSON.stringify(data))
+        fetch(url, {
+            method: 'POST', // or 'PUT'
+            headers: {
+              'Content-Type': 'application/json',
+              "accept": 'application/json',
+              "Access-Control-Allow-Origin": "*"
+
+
+            },
+            body: JSON.stringify(data),
+          }).then(data=>{return data.json()})
+        .then(res=>{console.log(res)})
+        .catch(error=>console.log(error))
+    }
+    
+</script>
