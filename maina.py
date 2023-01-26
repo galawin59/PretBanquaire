@@ -10,7 +10,7 @@ origins = [
     "http://localhost.tiangolo.com",
     "https://localhost.tiangolo.com",
     "http://localhost",
-    "http://localhost:8000",
+    "http://localhost:8080",
 ]
 
 
@@ -20,12 +20,7 @@ modelRandomForest = pickle.load(pickle_in)
 
 app = FastAPI()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],)
+
 
 class request_body(BaseModel):
     State : str
@@ -42,11 +37,34 @@ class request_body(BaseModel):
     LowDoc:int
     DisbursementGross: float
 
-@app.post("/predict")
+@app.get("/predict")
 
-def predict(data : request_body):
+async def predict( State : str,
+    BankState: str,
+    NAICS : str,
+    Term : int,
+    NoEmp : int,
+    NewExist : int,
+    CreateJob : int,
+    RetainedJob: int,
+    FranchiseCode : int,
+    UrbanRural :int,
+    RevLineCr : int,
+    LowDoc:int,
+    DisbursementGross: float):
     
-    
+    data = {"BankState": BankState,
+    "NAICS" : NAICS,
+    "Term" : Term,
+    "NoEmp" : NoEmp,
+    "NewExist" : NewExist,
+    "CreateJob ": CreateJob,
+    "RetainedJob": RetainedJob,
+    "FranchiseCode" : FranchiseCode,
+    "UrbanRural" :UrbanRural,
+    "RevLineCr" : RevLineCr,
+    "LowDoc":LowDoc,
+    "DisbursementGross": DisbursementGross}
     pred=pd.DataFrame(dict(data),index = [0])
 
 
