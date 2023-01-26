@@ -56,7 +56,7 @@
 <br>
 <br>
 
-<input class="favorite styled"
+<input class="favorite styled"  id="button-id" 
        type="button" onclick="getValue();"
        value="Envoyer">
 </form>
@@ -64,36 +64,28 @@
 <script>
     function getValue() {
         inputName = ["State","BankState","NAICS","Term","NoEmp","NewExist","CreateJob","RetainedJob","FranchiseCode","UrbanRural","RevLineCr","LowDoc","DisbursementGross"]
-        let dict = {};
+        //let dict = {};
         // Sélectionner l'élément input et récupérer sa valeur
+        var url = 'https://predictionpretbanquaire.onrender.com/predict?'
         for(var i = 0 ; i< inputName.length;i++)
         {
-            dict[inputName[i]] = document.getElementById(inputName[i]).value;
-         
-
+            //dict[inputName[i]] = document.getElementById(inputName[i]).value;
+            if(inputName[i]!= "DisbursementGross")
+            url += inputName[i] +"="+document.getElementById(inputName[i]).value+"&"
+            else
+            url += inputName[i] +"="+document.getElementById(inputName[i]).value
         }
     
-        
-        const url = 'https://predictionpretbanquaire.onrender.com/predict?State=CA&BankState=CA&NAICS=Other services (except public administration)&Term=228&NoEmp=6&NewExist=1&CreateJob=0&RetainedJob=0&FranchiseCode=1&UrbanRural=0&RevLineCr=0&LowDoc=0&DisbursementGross=540000'
-        const data = {
-            "State": "CA",
-            "BankState": "CA",
-            "NAICS": "Other services (except public administration)",
-            "Term": 228,
-            "NoEmp": 6,
-            "NewExist": 1,
-            "CreateJob": 0,
-            "RetainedJob": 0,
-            "FranchiseCode": 1,
-            "UrbanRural": 0,
-            "RevLineCr": 0,
-            "LowDoc": 0,
-            "DisbursementGross": 540000.0
-          }
+
+  
       
 
+      
+        document.getElementById('button-id').addEventListener('click', function() {getValue();
+          window.location.href =url;
+        });
     
-        fetch(url).then(response => response.json()).catch(error => alert("Erreur :" + error));
+        
 
         
     }
