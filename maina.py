@@ -13,7 +13,7 @@ modelRandomForest = pickle.load(pickle_in)
 
 app = FastAPI()
 
-@app.get("/predict")
+@app.get("/predict/")
 
 async def predict( State : str = "CA",
     BankState: str = "CA",
