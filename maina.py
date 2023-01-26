@@ -39,19 +39,19 @@ class request_body(BaseModel):
 
 @app.get("/predict")
 
-async def predict( State : str,
-    BankState: str,
-    NAICS : str,
-    Term : int,
-    NoEmp : int,
-    NewExist : int,
-    CreateJob : int,
-    RetainedJob: int,
-    FranchiseCode : int,
-    UrbanRural :int,
-    RevLineCr : int,
-    LowDoc:int,
-    DisbursementGross: float):
+async def predict( State : str = "CA",
+    BankState: str = "CA",
+    NAICS : str = "Other services (except public administration)",
+    Term : int = 228,
+    NoEmp : int = 6,
+    NewExist : int = 1,
+    CreateJob : int = 0,
+    RetainedJob: int = 0,
+    FranchiseCode : int = 1,
+    UrbanRural :int = 0,
+    RevLineCr : int = 0,
+    LowDoc:int = 0,
+    DisbursementGross: float = 540000.0):
     
     data = {"BankState": BankState,
     "NAICS" : NAICS,
