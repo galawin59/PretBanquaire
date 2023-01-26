@@ -15,7 +15,7 @@ app = FastAPI()
 
 @app.get("/predict/")
 
-async def predict( State : str = "CA",
+async def predict(State : str = "CA",
     BankState: str = "CA",
     NAICS : str = "Other services (except public administration)",
     Term : int = 228,
