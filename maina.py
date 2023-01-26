@@ -45,6 +45,9 @@ async def predict(State : str = "CA",
     pred=pd.DataFrame(dict(data),index = [0])
 
 
-    class_idx = modelRandomForest.predict(pred)[0]
-
-    return {'class':class_idx}
+    class_pred = modelRandomForest.predict(pred)[0]
+    if class_pred == "P I F":
+        return {"Class":"Votre crédit à était accépté , toute mes félicitations"}
+    else:
+        return {"Class": "Votre crédit à était refusé , merci de revoir vos ambitions à la baisse"}
+   
