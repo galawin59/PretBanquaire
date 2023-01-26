@@ -69,8 +69,8 @@
 
         }
     
-        console.log(JSON.stringify(dict));
-        const url = 'http://0.0.0.0:5000/predict'
+        
+        const url = 'https://predictionpretbanquaire.onrender.com/predict'
         const data = {
             "State": "CA",
             "BankState": "CA",
@@ -86,28 +86,18 @@
             "LowDoc": 0,
             "DisbursementGross": 540000.0
           }
-        const otherParams = {
-            headers:{
-                "content-type":"application/json; charset=UTF-8"
-            },
-            body:data,
-            method :"POST"
-        };
+      
 
         console.log(JSON.stringify(data))
         fetch(url, {
-            method: 'POST', // or 'PUT'
+            method: "GET", // or 'PUT'
             headers: {
-              'Content-Type': 'application/json',
-              "accept": 'application/json',
-              "Access-Control-Allow-Origin": "*"
-
-
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify(data),
-          }).then(data=>{return data.json()})
-        .then(res=>{console.log(res)})
-        .catch(error=>console.log(error))
+            body: JSON.stringify(data)
+          });
+
+        
     }
     
 </script>
