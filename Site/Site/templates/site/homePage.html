@@ -74,7 +74,7 @@
         }
     
         
-        const url = 'https://predictionpretbanquaire.onrender.com/predict'
+        const url = 'https://predictionpretbanquaire.onrender.com/predict?State=CA&BankState=CA&NAICS=Other services (except public administration)&Term=228&NoEmp=6&NewExist=1&CreateJob=0&RetainedJob=0&FranchiseCode=1&UrbanRural=0&RevLineCr=0&LowDoc=0&DisbursementGross=540000'
         const data = {
             "State": "CA",
             "BankState": "CA",
@@ -92,14 +92,8 @@
           }
       
 
-        console.log(JSON.stringify(data))
-        fetch(url, {
-            method: "GET", // or 'PUT'
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data)
-          });
+    
+        fetch(url).then(response => response.json()).catch(error => alert("Erreur :" + error));
 
         
     }
