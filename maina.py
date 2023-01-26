@@ -29,7 +29,8 @@ async def predict( State : str = "CA",
     LowDoc:int = 0,
     DisbursementGross: float = 540000.0):
     
-    data = {"BankState": BankState,
+    data = {"State": State,
+    "BankState": BankState,
     "NAICS" : NAICS,
     "Term" : Term,
     "NoEmp" : NoEmp,
