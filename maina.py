@@ -3,7 +3,7 @@ from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
-
+from fastapi.middleware.cors import CORSMiddleware
 
 
 
@@ -12,6 +12,15 @@ pickle_in = open('./RandomForest.pkl', 'rb')
 modelRandomForest = pickle.load(pickle_in)
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/predict/")
 
