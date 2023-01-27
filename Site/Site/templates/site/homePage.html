@@ -1,39 +1,44 @@
 <h1>Bienvenue sur mon site</h1>
 
 <form action="">
-<label for="State">State (ex:CA):</label>
-
-<input type="text" id="State" name="State" >
-<br>
-<br>
-<label for="BankState">BankState (ex:CA):</label>
-<input type="text" id="BankState" name="BankState" >
-<br>
-<br>
-<label for="NAICS">NAICS (ex:Sector not known):</label>
-<input type="text" id="NAICS" name="NAICS" >
+   
+<label for="NAICS">NAICS:</label>
+<select id="NAICS" name="NAICS">
+  <option value="Retail trade">Retail trade</option>
+  <option value="Accommodation and food services">Accommodation and food services</option>
+  <option value="Health care and social assistance">Health care and social assistance</option>
+  <option value="Sector not known">Sector not known</option>
+  <option value="Wholesale trade">Wholesale trade</option>
+  <option value="Manufacturing">Manufacturing</option>
+  <option value="Other services (except public administration)">Other services (except public administration)</option>
+  <option value="Construction">Construction</option>
+  <option value="Educational services">Educational services</option>
+  <option value="Realestate and rental and leasing">Realestate and rental and leasing</option>
+  <option value="Professional, scientific, and technical services">Professional, scientific, and technical services</option>
+  <option value="Information">Information</option>
+  <option value="Arts, entertainment, and recreation">Arts, entertainment, and recreation</option>
+  <option value="Finance and insurance">Finance and insurance</option>
+  <option value="Mining, quarrying, and oil and gas extraction">Mining, quarrying, and oil and gas extraction</option>
+  <option value="Administrative and support and waste management and remediation services">Administrative and support and waste management and remediation services</option>
+  <option value="Transportation and warehousing">Transportation and warehousing</option>
+  <option value="Agriculture, forestry, fishing and hunting">Agriculture, forestry, fishing and hunting</option>
+  <option value="Public administration">Public administration</option>
+  <option value="Utilities">Utilities</option>
+  <option value="Management of companies and enterprises">Management of companies and enterprises</option>
+</select>
 <br>
 <br>
 <label for="Term">Term (ex:80):</label>
 <input type="int" id="Term" name="Term" >
 <br>
 <br>
-<label for="NoEmp">NoEmp (ex:80):</label>
-<input type="int" id="NoEmp" name="NoEmp" >
-<br>
-<br>
+
 <label for="NewExist">NewExist (1 or 0):</label>
 <input type="int" id="NewExist" name="NewExist" >
 <br>
 <br>
-<label for="CreateJob">CreateJob (5):</label>
-<input type="int" id="CreateJob" name="CreateJob" >
-<br>
-<br>
-<label for="RetainedJob">RetainedJob (2):</label>
-<input type="int" id="RetainedJob" name="RetainedJob" >
-<br>
-<br>
+
+
 <label for="FranchiseCode">FranchiseCode (1 or 0):</label>
 <input type="int" id="FranchiseCode" name="FranchiseCode" >
 <br>
@@ -50,8 +55,8 @@
 <input type="int" id="LowDoc" name="LowDoc" >
 <br>
 <br>
-<label for="DisbursementGross">DisbursementGross (ex:35000.0):</label>
-<input type="float" id="DisbursementGross" name="DisbursementGross" >
+<label for="GrAppv">GrAppv:</label>
+<input type="float" id="GrAppv" name="GrAppv" >
 
 <br>
 <br>
@@ -59,11 +64,19 @@
 <input class="favorite styled"  id="button-id" 
        type="button" onclick="getValue();"
        value="Envoyer">
+<br>
+<br>
+
+<label for="Reponse":</label>
+<input type="text" id="reponse" name="reponse" style="width:400px;">
+
 </form>
+
+
 
 <script>
     function getValue() {
-        inputName = ["State","BankState","NAICS","Term","NoEmp","NewExist","CreateJob","RetainedJob","FranchiseCode","UrbanRural","RevLineCr","LowDoc","DisbursementGross"]
+        inputName = ["NAICS","Term","NewExist","FranchiseCode","UrbanRural","RevLineCr","LowDoc","GrAppv"]
         //let dict = {};
         // Sélectionner l'élément input et récupérer sa valeur
         var url = 'https://predictionpretbanquaire.onrender.com/predict?'
@@ -77,16 +90,20 @@
         }
     
 
-  
-      
-
-      
-        document.getElementById('button-id').addEventListener('click', function() {getValue();
-          window.location.href =url;
-        });
     
-        
+      
 
+      
+       // document.getElementById('button-id').addEventListener('click', function() {getValue();
+        //  window.location.href =url;
+       // });
+    
+
+       //res=>{document.getElementById("reponse").value = res[0]}
+        fetch(url).then(data=>{return data.json()})
+        .then(res=>{document.getElementById("reponse").value = res.Class})
+
+        //console.log(res)
         
     }
     
