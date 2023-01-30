@@ -1,7 +1,9 @@
-<h1>Bienvenue sur mon site</h1>
+{% load static %}
 
 <form action="">
-   
+    
+<div style="text-align: center;">  
+<h1>Credit Advantage : Un credit pour tous le monde </h1>
 <label for="NAICS">NAICS:</label>
 <select id="NAICS" name="NAICS">
   <option value="Retail trade">Retail trade</option>
@@ -28,34 +30,50 @@
 </select>
 <br>
 <br>
-<label for="Term">Term (ex:80):</label>
+<label for="Term">En combien de mois vous voulez rembourser votre prêt ? </label>
 <input type="int" id="Term" name="Term" >
 <br>
 <br>
 
-<label for="NewExist">NewExist (1 or 0):</label>
-<input type="int" id="NewExist" name="NewExist" >
+<label for="NewExist">Votre entreprise à t'elle plus de 1 an ? (1 pour oui  0 pour non) </label>
+
+<select id="NewExist" name="NewExist">
+<option value="1">1</option>
+<option value="0">0</option>
+</select>
 <br>
 <br>
 
 
-<label for="FranchiseCode">FranchiseCode (1 or 0):</label>
-<input type="int" id="FranchiseCode" name="FranchiseCode" >
+<label for="FranchiseCode">Etes vous une franchise ? (1 pour oui  0 pour non)</label>
+<select id="FranchiseCode" name="FranchiseCode">
+    <option value="1">1</option>
+    <option value="0">0</option>
+</select>
 <br>
 <br>
-<label for="UrbanRural">UrbanRural (1 or 0):</label>
-<input type="int" id="UrbanRural" name="UrbanRural" >
+<label for="UrbanRural">Votre entreprise est en ville ou à la campagne ?  (1  pour ville  0 pour campagne)</label>
+<select id="UrbanRural" name="UrbanRural">
+    <option value="1">1</option>
+    <option value="0">0</option>
+</select>
 <br>
 <br>
-<label for="RevLineCr">RevLineCr (1 or 0):</label>
-<input type="int" id="RevLineCr" name="RevLineCr" >
+<label for="RevLineCr">Souhaitez vous un crédit de type revolving ? (1 pour oui  0 pour non)</label>
+<select id="RevLineCr" name="RevLineCr">
+    <option value="1">1</option>
+    <option value="0">0</option>
+</select>
 <br>
 <br>
-<label for="LowDoc">LowDoc (1 or 0):</label>
-<input type="int" id="LowDoc" name="LowDoc" >
+<label for="LowDoc">Souhaitez vous un crédit à faible documentation ? (1 pour oui  0 pour non)</label>
+<select id="LowDoc" name="LowDoc">
+    <option value="1">1</option>
+    <option value="0">0</option>
+</select>
 <br>
 <br>
-<label for="GrAppv">GrAppv:</label>
+<label for="GrAppv">Quel est le montant du prêt auquel vous souhaitez souscrire ? </label>
 <input type="float" id="GrAppv" name="GrAppv" >
 
 <br>
@@ -63,13 +81,17 @@
 
 <input class="favorite styled"  id="button-id" 
        type="button" onclick="getValue();"
-       value="Envoyer">
+       value="Envoyer"style="background-color: Yellow; font-size: 16px; padding: 10px;">
 <br>
 <br>
 
 <label for="Reponse":</label>
 <input type="text" id="reponse" name="reponse" style="width:400px;">
+<br>
+<br>
+<img src="{% static 'Site/loading.gif'%}" id = "image">
 
+</div>
 </form>
 
 
@@ -83,14 +105,14 @@
         for(var i = 0 ; i< inputName.length;i++)
         {
             //dict[inputName[i]] = document.getElementById(inputName[i]).value;
-            if(inputName[i]!= "DisbursementGross")
+            if(inputName[i]!= "GrAppv")
             url += inputName[i] +"="+document.getElementById(inputName[i]).value+"&"
             else
             url += inputName[i] +"="+document.getElementById(inputName[i]).value
         }
     
 
-    
+        
       
 
       
@@ -103,7 +125,22 @@
         fetch(url).then(data=>{return data.json()})
         .then(res=>{document.getElementById("reponse").value = res.Class})
 
+        setTimeout(function () {
+        var value = document.getElementById("reponse").value;
+        console.log(value)
+        if (value == "Votre crédit à était accépté , toute mes félicitations") 
+        {
+            // Modifier l'image pour afficher une autre image
+            document.getElementById("image").src = "{% static 'Site/minions.gif' %}";
+          }
+        else{
+            document.getElementById("image").src = "{% static 'Site/suicide.gif' %}";
+          }
+
+        //document.getElementById('image').src = 'Site/minions.gif';
+
         //console.log(res)
+    }, 2000);
         
     }
     
