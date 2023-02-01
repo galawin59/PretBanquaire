@@ -1,6 +1,0 @@
-Django
-fastapi
-pandas
-pydantic
-requests
-scikit_learn
