@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/911ae40ac441458893a94a26adbc59be/artifacts
+end_time: 1675415577704
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 911ae40ac441458893a94a26adbc59be
+run_name: chill-hawk-742
+run_uuid: 911ae40ac441458893a94a26adbc59be
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675415577696
+status: 4
+tags: []
+user_id: apprenant

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/06c13bcbbfb14295ad1bbc53425e8235/artifacts
+end_time: 1675673101583
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 06c13bcbbfb14295ad1bbc53425e8235
+run_name: casual-roo-795
+run_uuid: 06c13bcbbfb14295ad1bbc53425e8235
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675672391006
+status: 4
+tags: []
+user_id: apprenant

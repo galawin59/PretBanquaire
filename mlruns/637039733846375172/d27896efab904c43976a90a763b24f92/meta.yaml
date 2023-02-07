@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/d27896efab904c43976a90a763b24f92/artifacts
+end_time: 1675418851846
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: d27896efab904c43976a90a763b24f92
+run_name: thoughtful-panda-975
+run_uuid: d27896efab904c43976a90a763b24f92
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675418842803
+status: 3
+tags: []
+user_id: apprenant

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/45f0c1bc455d4b3c9a0ce767971e1c86/artifacts
+end_time: 1675681737100
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 45f0c1bc455d4b3c9a0ce767971e1c86
+run_name: dapper-bat-607
+run_uuid: 45f0c1bc455d4b3c9a0ce767971e1c86
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675681730414
+status: 3
+tags: []
+user_id: apprenant

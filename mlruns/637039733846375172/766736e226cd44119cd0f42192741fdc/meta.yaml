@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/766736e226cd44119cd0f42192741fdc/artifacts
+end_time: 1675690346997
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 766736e226cd44119cd0f42192741fdc
+run_name: shivering-pig-425
+run_uuid: 766736e226cd44119cd0f42192741fdc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675687880131
+status: 3
+tags: []
+user_id: apprenant

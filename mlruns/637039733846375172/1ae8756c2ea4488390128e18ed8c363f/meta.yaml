@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/1ae8756c2ea4488390128e18ed8c363f/artifacts
+end_time: 1675415980131
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 1ae8756c2ea4488390128e18ed8c363f
+run_name: grandiose-wasp-396
+run_uuid: 1ae8756c2ea4488390128e18ed8c363f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675415980118
+status: 4
+tags: []
+user_id: apprenant

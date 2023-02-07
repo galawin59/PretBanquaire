@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/d4a2754a5d444bd6b40825a6b281b2ee/artifacts
+end_time: 1675420851278
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: d4a2754a5d444bd6b40825a6b281b2ee
+run_name: crawling-skink-764
+run_uuid: d4a2754a5d444bd6b40825a6b281b2ee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675420829415
+status: 4
+tags: []
+user_id: apprenant

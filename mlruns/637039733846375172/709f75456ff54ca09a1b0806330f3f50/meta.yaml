@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/709f75456ff54ca09a1b0806330f3f50/artifacts
+end_time: 1675415529504
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 709f75456ff54ca09a1b0806330f3f50
+run_name: bold-quail-183
+run_uuid: 709f75456ff54ca09a1b0806330f3f50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675415529493
+status: 4
+tags: []
+user_id: apprenant

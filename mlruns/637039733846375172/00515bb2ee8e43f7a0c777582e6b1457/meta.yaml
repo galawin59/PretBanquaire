@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/00515bb2ee8e43f7a0c777582e6b1457/artifacts
+end_time: 1675422958891
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 00515bb2ee8e43f7a0c777582e6b1457
+run_name: enchanting-cub-417
+run_uuid: 00515bb2ee8e43f7a0c777582e6b1457
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675420867458
+status: 3
+tags: []
+user_id: apprenant

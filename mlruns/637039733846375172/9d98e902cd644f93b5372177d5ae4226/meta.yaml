@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/9d98e902cd644f93b5372177d5ae4226/artifacts
+end_time: 1675436387849
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 9d98e902cd644f93b5372177d5ae4226
+run_name: victorious-mare-868
+run_uuid: 9d98e902cd644f93b5372177d5ae4226
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675430922269
+status: 4
+tags: []
+user_id: apprenant

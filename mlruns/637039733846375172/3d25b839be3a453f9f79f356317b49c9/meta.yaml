@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/3d25b839be3a453f9f79f356317b49c9/artifacts
+end_time: 1675694383979
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 3d25b839be3a453f9f79f356317b49c9
+run_name: nervous-fowl-567
+run_uuid: 3d25b839be3a453f9f79f356317b49c9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675694378909
+status: 3
+tags: []
+user_id: apprenant

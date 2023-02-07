@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/e1f24b9aa26d4cd897e0c3f436da2b00/artifacts
+end_time: 1675675602186
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: e1f24b9aa26d4cd897e0c3f436da2b00
+run_name: secretive-kite-300
+run_uuid: e1f24b9aa26d4cd897e0c3f436da2b00
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675673112497
+status: 3
+tags: []
+user_id: apprenant

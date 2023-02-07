@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/b930e70012494f0480c94f5943aab91e/artifacts
+end_time: 1675419847727
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: b930e70012494f0480c94f5943aab91e
+run_name: masked-goat-994
+run_uuid: b930e70012494f0480c94f5943aab91e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675419759233
+status: 3
+tags: []
+user_id: apprenant

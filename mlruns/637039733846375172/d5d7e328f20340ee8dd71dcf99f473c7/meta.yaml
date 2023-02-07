@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/d5d7e328f20340ee8dd71dcf99f473c7/artifacts
+end_time: 1675681955832
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: d5d7e328f20340ee8dd71dcf99f473c7
+run_name: nervous-toad-548
+run_uuid: d5d7e328f20340ee8dd71dcf99f473c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675681953433
+status: 3
+tags: []
+user_id: apprenant

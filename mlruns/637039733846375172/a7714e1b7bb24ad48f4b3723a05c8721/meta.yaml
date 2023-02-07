@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/a7714e1b7bb24ad48f4b3723a05c8721/artifacts
+end_time: 1675683010366
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: a7714e1b7bb24ad48f4b3723a05c8721
+run_name: serious-cow-645
+run_uuid: a7714e1b7bb24ad48f4b3723a05c8721
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675682946667
+status: 3
+tags: []
+user_id: apprenant

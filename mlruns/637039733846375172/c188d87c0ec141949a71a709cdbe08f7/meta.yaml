@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/c188d87c0ec141949a71a709cdbe08f7/artifacts
+end_time: 1675415052010
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: c188d87c0ec141949a71a709cdbe08f7
+run_name: adaptable-roo-740
+run_uuid: c188d87c0ec141949a71a709cdbe08f7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675415052002
+status: 4
+tags: []
+user_id: apprenant

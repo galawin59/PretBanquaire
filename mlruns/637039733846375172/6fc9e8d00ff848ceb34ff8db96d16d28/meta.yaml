@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/6fc9e8d00ff848ceb34ff8db96d16d28/artifacts
+end_time: 1675439106094
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 6fc9e8d00ff848ceb34ff8db96d16d28
+run_name: rumbling-bat-288
+run_uuid: 6fc9e8d00ff848ceb34ff8db96d16d28
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675436398882
+status: 4
+tags: []
+user_id: apprenant

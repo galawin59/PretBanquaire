@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/fb43f7dca2d84187a67ded111c739ab5/artifacts
+end_time: 1675415451900
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: fb43f7dca2d84187a67ded111c739ab5
+run_name: bemused-hound-137
+run_uuid: fb43f7dca2d84187a67ded111c739ab5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675415451892
+status: 4
+tags: []
+user_id: apprenant

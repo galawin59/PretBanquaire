@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/48279f431ae0487abb001b05497a58f7/artifacts
+end_time: 1675415309640
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: 48279f431ae0487abb001b05497a58f7
+run_name: carefree-crab-179
+run_uuid: 48279f431ae0487abb001b05497a58f7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675415309632
+status: 4
+tags: []
+user_id: apprenant

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/apprenant/Documents/GitHub/Pret/PretBanquaire/mlruns/637039733846375172/d77aa0717fef41c4937973468327ce80/artifacts
+end_time: 1675687041879
+entry_point_name: ''
+experiment_id: '637039733846375172'
+lifecycle_stage: active
+run_id: d77aa0717fef41c4937973468327ce80
+run_name: sincere-lark-933
+run_uuid: d77aa0717fef41c4937973468327ce80
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675686751266
+status: 3
+tags: []
+user_id: apprenant
